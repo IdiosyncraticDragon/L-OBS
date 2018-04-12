@@ -200,7 +200,7 @@ for layer_name in layer_name_list:
 		prune_weights_conv(paramters[layer_name]['weights'], paramters[layer_name]['biases'], hessian_inverse, CR=40)
 
 	elif layer_name.startswith('fc'):
-		prune_weights_conv(paramters[layer_name]['weights'], paramters[layer_name]['biases'], hessian_inverse, CR=40)
+		prune_weights_fc(paramters[layer_name]['weights'], paramters[layer_name]['biases'], hessian_inverse, CR=40)
 
 	elif layer_name.startswith('res'):
 		prune_weights_conv(paramters[layer_name]['weights'], hessian_inverse, CR=40)
